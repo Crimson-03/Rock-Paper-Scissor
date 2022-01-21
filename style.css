@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Varela+Round&display=swap');
+
+body{
+    font-family: 'Indie Flower', cursive;
+    /* overflow: hidden; */
+    overflow: auto;
+    background: url("images/cool-background.png");
+}
+
+#header{
+    background: url("images/cool-background5.png");
+}
+
+#header a{
+    text-decoration: none;
+    color: black;
+}
+
+#rock i,#paper i,#scissor i,#content i{
+    font-size: 100px;
+}
+
+#rock,#paper,#scissor{
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 23px 130px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+  
+    display: block;
+    position: relative;
+    border: solid 3px yellow;
+    line-height: 28px;
+    transform: rotate(-1deg);
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+    transition: all 0.13s ease-in;
+}
+  
+#rock:hover, #paper:hover, #scissor:hover{
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#content{
+    margin: 95px auto;
+    border: solid yellowgreen;
+    /* border-color: black; */
+    border-width: 5px 3px 3px 5px;
+    border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+    transform: rotate(2deg);
+}
+
+#result{
+    margin: 245px auto;
+}

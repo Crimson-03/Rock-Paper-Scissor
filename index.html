@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock, Paper & Scissor</title>
+</head>
+<body>
+    <div class="container-fluid" id="header">
+        <header class="d-flex justify-content-center py-3">
+          <h1><a href="index.html">Rock, Paper & Scissor</a></h1>
+        </header>
+      </div>
+    <div class="container-fluid py-2">
+        <div class="row">
+            <div class="col-2 text-center" id="options">
+                <!-- <i class="far fa-hand-rock"></i> -->
+                <div class="py-3 my-3" id="rock" onclick="option(this)">
+                    <i class="far fa-hand-rock"></i>
+                    <p>Rock</p>
+                </div>
+                <div class="py-3 my-3" id="paper" onclick="option(this)">
+                    <i class="far fa-hand-paper"></i>
+                    <p>Paper</p>
+                </div>
+                <div class="py-3 my-3" id="scissor" onclick="option(this)">
+                    <i class="far fa-hand-scissors"></i>
+                    <p>Scissor</p>
+                </div>
+            </div>
+            <div class="col-4 text-center" id="you">
+                <h3 class="my-2" id="user-score"><b><i>You</i></b></h3>
+                <div id="content">
+                    <i class="fas fa-gamepad" id="user-option"></i>
+                    <p id="user-element">Choose your option</p>
+                </div>
+            </div>
+            <div class="col-2 text-center">
+                <h3 class="my-2"><b><i>vs</i></b></h3>
+                <div id="result" class="fs-1">Result</div>
+            </div>
+            <div class="col-4 text-center" id="comp">
+                <h3 class="my-2"><b><i>Computer</i></b></h3>
+                <div id="content">
+                    <i id="comp-option" class="fas fa-robot"></i>
+                    <p id="comp-element">Computer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-12 text-center" id="result">
+                RESULT
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/056253eb99.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
