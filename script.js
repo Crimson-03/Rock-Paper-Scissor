@@ -1,11 +1,14 @@
+var uscr = 0; // user-score
+var cscr = 0; // computer-score
+var val = 0;
+
 function option(div) {
 
     //you
     let choosedOption = div.id;
     var elem1 = document.getElementById("user-option");
     var elem2 = document.getElementById("user-element");
-    elem1.style.fontSize = "200px";
-    elem2.style.fontSize = "50px";
+
     var y;
     if (choosedOption == "rock") {
         elem1.removeAttribute("class");
@@ -33,8 +36,7 @@ function option(div) {
     let x = Math.floor((Math.random() * 100) + 1);
     var elem3 = document.getElementById("comp-option");
     var elem4 = document.getElementById("comp-element");
-    elem3.style.fontSize = "200px";
-    elem4.style.fontSize = "50px";
+
     if (x % 3 == 1) {
         elem3.removeAttribute("class");
         elem3.classList.add("far");
@@ -54,8 +56,28 @@ function option(div) {
         elem4.innerText = "Scissor";
     }
 
+    // font-size
+    let width = window.outerWidth;
+    if (width >= 768) {
+        elem1.style.fontSize = "200px";
+        elem2.style.fontSize = "50px";
+        elem3.style.fontSize = "200px";
+        elem4.style.fontSize = "50px";
+    }
+    else if (width < 768 && width >= 576) {
+        elem1.style.fontSize = "100px";
+        elem2.style.fontSize = "25px";
+        elem3.style.fontSize = "100px";
+        elem4.style.fontSize = "25px";
+    }
+    else {
+        elem1.style.fontSize = "75px";
+        elem2.style.fontSize = "25px";
+        elem3.style.fontSize = "75px";
+        elem4.style.fontSize = "25px";
+    }
+
     // result
-    var val = 0;
     if (x % 3 == y) {
         document.getElementById("result").innerHTML = "Draw&#128566;"
         val = 0;
@@ -83,5 +105,20 @@ function option(div) {
     else if (y == 0 && x % 3 == 2) {
         document.getElementById("result").innerHTML = "Win&#128526;"
         val = 1;
+    }
+}
+
+function score() {
+    if(val==1)
+    {
+        uscr++;
+        document.getElementById("user-score").innerHTML = "<b><i>You: </i></b>" + uscr.toString();
+        document.getElementById("comp-score").innerHTML = "<b><i>Computer: </i></b>" + cscr.toString();
+    }
+    else if(val==-1)
+    {
+        cscr++;
+        document.getElementById("user-score").innerHTML = "<b><i>You: </i></b>" + uscr.toString();
+        document.getElementById("comp-score").innerHTML = "<b><i>Computer: </i></b>" + cscr.toString();
     }
 }
