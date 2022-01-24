@@ -112,13 +112,13 @@ function score() {
     if(val==1)
     {
         uscr++;
-        document.getElementById("user-score").innerHTML = "<b><i>You: </i></b>" + uscr.toString();
-        document.getElementById("comp-score").innerHTML = "<b><i>Computer: </i></b>" + cscr.toString();
+        document.getElementById("user-score").innerHTML = "<b><i>You: </i></b><b>" + uscr.toString() + "</b>";
+        document.getElementById("comp-score").innerHTML = "<b><i>Computer: </i></b><b>" + cscr.toString() + "</b>";
     }
     else if(val==-1)
     {
         cscr++;
-        document.getElementById("user-score").innerHTML = "<b><i>You: </i></b>" + uscr.toString();
-        document.getElementById("comp-score").innerHTML = "<b><i>Computer: </i></b>" + cscr.toString();
+        document.getElementById("user-score").innerHTML = "<b><i>You: </i></b><b>" + uscr.toString() + "</b>";
+        document.getElementById("comp-score").innerHTML = "<b><i>Computer: </i></b><b>" + cscr.toString() + "</b>";
     }
 }
