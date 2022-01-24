@@ -2,7 +2,6 @@
 
 body{
     font-family: 'Indie Flower', cursive;
-    /* overflow: hidden; */
     overflow: auto;
     background: url("images/cool-background.png");
 }
@@ -14,10 +13,6 @@ body{
 #header a{
     text-decoration: none;
     color: black;
-}
-
-#rock i,#paper i,#scissor i,#content i{
-    font-size: 100px;
 }
 
 #rock,#paper,#scissor{
@@ -34,7 +29,11 @@ body{
     box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
     transition: all 0.13s ease-in;
 }
-  
+
+#rock i,#paper i,#scissor i,#content i{
+    font-size: 100px;
+}
+
 #rock:hover, #paper:hover, #scissor:hover{
     transform: translateY(-10px) rotate(1deg);
     box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
@@ -44,7 +43,6 @@ body{
 #content{
     margin: 95px auto;
     border: solid yellowgreen;
-    /* border-color: black; */
     border-width: 5px 3px 3px 5px;
     border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
     transform: rotate(2deg);
@@ -52,4 +50,86 @@ body{
 
 #result{
     margin: 245px auto;
+}
+
+@media (max-width: 992px){
+    #rock i,#paper i,#scissor i,#content i{
+        font-size: 75px;
+    }
+}
+
+@media (max-width: 768px){
+    #rock i,#paper i,#scissor i,#content i{
+        font-size: 50px;
+    }
+    #result{
+        margin: 180px auto;
+    }
+    
+}
+
+@media (max-width: 576px){
+    #rock,#paper,#scissor{
+        display: inline-block;
+        padding: 20px;
+        margin: auto 25px;
+    }
+    #rock i,#paper i,#scissor i,#content i{
+        font-size: 50px;
+    }
+    #you{
+        width: 40%;
+    }
+    #vs{
+        width: 20%;
+    }
+    #comp{
+        width: 40%;
+    }
+    #you, #vs, #comp{
+        padding: 10px 2px;
+    }
+    #content{
+        margin: 30px auto;
+    }
+    #result{
+        margin: 45px auto;
+    }
+}
+
+@media(max-width: 480px){
+    #rock,#paper,#scissor{
+        margin: auto;
+    }
+    #rock i,#paper i,#scissor i,#content i{
+        font-size: 40px;
+    }
+    #you, #vs, #comp{
+        padding: 10px 2px;
+    }
+    #content{
+        margin: 30px auto;
+    }
+    #result{
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 320px)
+{
+    #rock,#paper,#scissor{
+        margin: auto;
+    }
+    #rock i,#paper i,#scissor i,#content i{
+        font-size: 20px;
+    }
+    #you, #vs, #comp{
+        padding: 10px 2px;
+    }
+    #content{
+        margin: 30px auto;
+    }
+    #result{
+        margin: 30px auto;
+    }
 }
